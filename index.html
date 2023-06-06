@@ -1,48 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
-        <meta name="viewport" content="width=device-width, intial scale=1.0">
-        <title>Sam Spears Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/2654913afe.js" crossorigin="anonymous"></script>
-    </head>
 
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="images/logo.png" class="logo">
-                    <ul id="sidemenu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="contact.html">Get in touch</a></li>
-                        <i class="fas fa-regular fa-circle-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, intial scale=1.0">
+    <title>Sam Spears Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2654913afe.js" crossorigin="anonymous"></script>
+</head>
 
-                </nav>
-                <div class="header-text">
-                    <p></p>
-                    <h1></h1>
+<body>
+    <div class="page">
+
+        <div class="container">
+
+            <div id="header">
+                <div class="topnav">
+                    <nav>
+                        <img src="images/logo.png" class="logo">
+                        <ul id="sidemenu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="contact.html">Get in touch</a></li>
+                            <i class="fas fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+                    </nav>
                 </div>
             </div>
+
+            <div id="bio-block">
+                <div class="row">
+                    <div class="profile-pic">
+                        <img src="images/Headshot.jpg">
+                    </div>
+                    <div class="bio-text">
+                        <h1 class="sub-title">About Me</h1>
+                        <p class="text">
+                            I am a Biomechanical Engineer PhD student speciallising in designing 3D printed bespoke neck
+                            collars
+                            with embedded sensors for real-time monitoring for people living with Motor Neurone Disease.
+                            <br>
+                            <br> 
+                            I work with a multidisplinary team across london including Royal Free Hospital,
+                            National Hospital for Neurology and Neurosurgery, and Royal National Orhtopaedic Hospital.
+                            <br>
+                            <br>
+                            In my free time, I enjoy swimming, the gym, perfoming, and all things technology.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="st">
+                <div class="tabs">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="table-layout">
+                          <table class="table">
+                            <tr>
+                              <th>Coding</th>
+                              <th>Software</th>
+                              <th>Hardware</th>
+                              <th>Other</th>
+                            </tr>
+                            <tr>
+                              <td>
+                                <ul>
+                                  <li>Python</li>
+                                  <li>R</li>
+                                  <li>Matlab</li>
+                                  <li>HTML/CSS</li>
+                                </ul>
+                              </td>
+                              <td>
+                                <ul>
+                                  <li>Solidworks</li>
+                                  <li>Rhino 7</li>
+                                </ul>
+                              </td>
+                              <td>
+                                <ul>
+                                  <li>3D Scanning</li>
+                                </ul>
+                              </td>
+                              <td>
+                                <ul>
+                                  <li>Certificates</li>
+                                </ul>
+                              </td>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <div class="exp">
+                            <ul>
+                                <li><span>2021 - Current</span><br>Tissue Collection Officer</li>
+                                <li><span>2017-2019</span><br>Mechanical Design Engineer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <div class="edu">
+                            <ul>
+                                <li><span>2020 - Current</span><br>University College London: PhD Candidate</li>
+                                <li><span>2019 - 2020</span><br>University of Leeds: MSc(Hons) Advanced Mechanical Engineering -
+                                        Merit</li>
+                                <li><span>2015 - 2019</span><br>University of Plymouth: BSc(Hons) Mechanical Deisgn and
+                                    Manufacture - 1st</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="twitter">
+                <a class="twitter-timeline" data-width="500" data-height="400"
+                    href="https://twitter.com/SpearsSam?ref_src=twsrc%5Etfw">Tweets by SpearsSam</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
+    </div>
 
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
 
-         <script>
-            var sidemenu = document.getElementById("sidemenu")
+        function openmenu() {
+            sidemenu.style.right = "0"
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px"
+        }
 
-            function openmenu(){
-                sidemenu.style.right = "0"
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
             }
-            function closemenu(){
-                sidemenu.style.right = "-200px"
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
             }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
 
-        </script>
-  
-    </body>
 </html>
